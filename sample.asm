@@ -11,3 +11,4 @@ SUB $s1, $s2, $s0
 end:
 
 ADD $zero, $zero, $zero// not necessary
+HALT

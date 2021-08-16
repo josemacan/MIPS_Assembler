@@ -58,6 +58,36 @@ class mips:
         logging.error('Unsupported src type')
         return ''
 
+    def _convert_hex_to_bin(self, src, digits: int) -> str:
+        if isinstance(src, str):
+            try:
+                src = int(src, 16)  # Convert hex string to int 
+            except Exception:
+                logging.error('Cannot convert src to integer')
+        if isinstance(src, int):
+            if src < 0:
+                # 2's comp
+                return bin(src % (1 << digits)) 
+            return bin(src)[2:].zfill(digits)   # Convert integer to bin
+        logging.error('Unsupported src type')
+        return ''
+
+    def _convert_binstring_to_bin(self, src, digits: int) -> str:
+        ## 
+        print("src = ", src, " -- digits = ", digits)
+        ##
+        if isinstance(src, str):    # Src is a str
+            try:
+                src = int(src, 2)  # Convert bin string to int 
+                return bin(src)[2:].zfill(digits)
+            except Exception:
+                logging.error('Cannot convert src to integer')
+        if isinstance(src, int):    # Src is an int
+            src = int(str(src),2)   # Convert bin (101) to str then int (5) again to format bin (0b101)
+            return bin(src)[2:].zfill(digits)   # Convert integer to bin and fill with 0s
+        logging.error('Unsupported src type')
+        return ''
+
     def _decommentize(self, line: str, comment='''//''') -> str:
         pos = line.find(comment)
         if pos != -1:
@@ -103,8 +133,9 @@ class mips:
     def _parse(self, line: str, addr: int, sep=' ', end='\n') -> str:
         line = self._decommentize(line)
         l = [i for i in line.replace(',', ' ').split(' ') if i.strip()]
-
-        if len(l) < 2:
+        if l[0].upper() == "HALT" :
+            print("HALT INSTRUCTION")
+        if len(l) < 2 & (l[0].upper() != "HALT"):
             logging.error("Invalid Instruction {}".format(line))
             return ''
         inst_dict = self.inst.get('inst', {}).get(l[0].upper())
@@ -119,13 +150,22 @@ class mips:
                 inst_dict.get('format')))
             return end
         index = 1
-        for slot in inst_format:
-            placeholder = list(slot.keys())[0]
-            bit = list(slot.values())[0]
+        for slot in inst_format:        # slot = pair key-value // key: each field of the instruction // value // e.g: {op:6}, {rs:5}, etc. 
+            placeholder = list(slot.keys())[0]      # placeholder = key // e.g.: op, rs, rt, shamt, etc
+            bit = list(slot.values())[0]    # bits = value // number of bits of that field inside the instruction // e.g.: 6, 5, etc // 
             if placeholder == 'op':
-                binary.append(self._convert_to_bin(inst_dict.get(
-                    'op', {}).get('dec'), bit))
-                continue
+                if inst_dict.get('op', {}).get('dec') != None:      # Value of opcode in decimal
+                    binary.append(self._convert_to_bin(inst_dict.get(
+                        'op', {}).get('dec'), bit))
+                    continue
+                if inst_dict.get('op', {}).get('hex') != None:      # Value of opcode in hex
+                    binary.append(self._convert_hex_to_bin(inst_dict.get(
+                        'op', {}).get('hex'), bit))
+                    continue
+                if inst_dict.get('op', {}).get('bin') != None:      # Value of opcode in binary
+                    binary.append(self._convert_binstring_to_bin(inst_dict.get(
+                        'op', {}).get('bin'), bit))
+                    continue
             else:
                 if inst_dict.get(placeholder, {}).get('enabled', False):
                     if index < len(l):
