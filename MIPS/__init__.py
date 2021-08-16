@@ -169,6 +169,16 @@ class mips:
                     binary.append(self._convert_binstring_to_bin(inst_dict.get(
                         'op', {}).get('bin'), bit))
                     continue
+            elif placeholder == 'funct':
+                if inst_dict.get(placeholder, {}).get('enabled', False):
+                    if inst_dict.get('funct', {}).get('value_dec') != None:      # Value of function in dec
+                        value_decimal = inst_dict.get('funct', {}).get('value_dec')
+                        binary.append(self._convert_to_bin(value_decimal, bit))
+                        continue
+                    if inst_dict.get('funct', {}).get('value_bin') != None:      # Value of function in binary
+                        value_bin = inst_dict.get('funct', {}).get('value_bin')
+                        binary.append(self._convert_binstring_to_bin(value_bin, bit))
+                        continue
             else:
                 if inst_dict.get(placeholder, {}).get('enabled', False):
                     if index < len(l):
@@ -213,6 +223,9 @@ class mips:
         lines = self._preprocess(text)
         addr = self.base_address
         for i in lines:
+            ###
+            print("---- Line: ", i)
+            ###
             src = '    |    ' + i.strip() if with_src else ''
             bin_code.append(self._parse(i, addr=addr, end='',
                                         sep=' ' if human_readable else '') + src)
