@@ -191,6 +191,7 @@ class mips:
                     else:  # result should be value
                         ph = self._convert_to_bin(value, bit)
                     binary.append(ph)
+        print("Binary: ", binary)
         return sep.join(binary) + end
 
     def translate_line(self, assembly_code: str, human_readable=False) -> str:

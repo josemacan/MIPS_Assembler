@@ -24,7 +24,16 @@
                 "enabled": true,
                 "value_dec": null,
                 "value_bin": "100000"
+            },
+            "imm": {
+                "enabled": false,
+                "value": 0
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
             }
+
         },
         "ADDI": {
             "format": "I",
