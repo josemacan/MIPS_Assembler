@@ -1025,6 +1025,7 @@
         },
         "BEQ": {
             "format": "I",
+            "relative_addr": true,
             "op": {
                 "dec": null,
                 "hex": null,
@@ -1059,6 +1060,7 @@
         },
         "BNE": {
             "format": "I",
+            "relative_addr": true,
             "op": {
                 "dec": null,
                 "hex": null,
