@@ -73,9 +73,6 @@ class mips:
         return ''
 
     def _convert_binstring_to_bin(self, src, digits: int) -> str:
-        ## 
-        print("src = ", src, " -- digits = ", digits)
-        ##
         if isinstance(src, str):    # Src is a str
             try:
                 src = int(src, 2)  # Convert bin string to int 
