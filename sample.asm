@@ -1,3 +1,4 @@
+ADDI $0, $17,  4
 ADDI $zero, $s1,  4
 ADDI $zero, $s2, 3
 ADDI $zero, $s3, 1

@@ -33,7 +33,7 @@ class mips:
                     addr = addr + 1
         return new
 
-    def _convert_reg(self, nickname: str) -> int:
+    def _convert_reg(self, nickname: str) -> int:   # Convert reg name to reg number (e.g: $zero = 0, $s1 = 17)
         nickname = nickname.strip()
         if nickname.startswith(self.reg.get("prefix")):
             reg_num = self.reg.get("reg_name", {}).get(
@@ -103,14 +103,17 @@ class mips:
         return l
 
     def _replace_slot(self, src, addr, relative_addr: bool) -> int:
+        ### - src: name of operand ($zero, $s1, 4 (imm), etc)
+        ### - addr: number of line (1, 2, 3, ...)
+        ### - relative_addr: True (when relative, eg: tag) // False
         # keep in mind that returning negative num is allowed here
-        if isinstance(src, int) or (isinstance(src, str) and src.isdigit()):
-            # no action required
+        if isinstance(src, int) or (isinstance(src, str) and src.isdigit()):    
+            # no action required if operand is int or digit, just cast to int
             return int(src)
-        if isinstance(src, str):
+        if isinstance(src, str):    # if operand is a string
             if src.startswith(self.reg.get("prefix")):
                 # Special case for register like $s0
-                src = self._convert_reg(src.lower())
+                src = self._convert_reg(src.lower())    # Convert reg name to reg number (e.g: $zero = 0, $s1 = 17)
             elif src.startswith('#'):
                 # Special case for address like #2
                 src = src[1:]
