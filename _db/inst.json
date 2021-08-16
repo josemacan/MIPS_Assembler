@@ -3,9 +3,9 @@
         "ADD": {
             "format": "R",
             "op": {
-                "dec": 0,
+                "dec": null,
                 "hex": null,
-                "bin": null
+                "bin": "0"
             },
             "rs": {
                 "enabled": true
@@ -27,49 +27,19 @@
             },
             "imm": {
                 "enabled": false,
-                "value": 0
+                "value": null
             },
             "addr": {
                 "enabled": false,
                 "value": null
             }
-
         },
-        "ADDI": {
-            "format": "I",
-            "op": {
-                "dec": 8,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true
-            },
-            "rd": {
-                "enabled": false
-            },
-            "shamt": {
-                "enabled": false,
-                "value": null
-            },
-            "funct": {
-                "enabled": false,
-                "value": null
-            },
-            "imm": {
-                "enabled": true,
-                "value": null
-            }
-        },
-        "AND": {
+        "SUB": {
             "format": "R",
             "op": {
-                "dec": 0,
+                "dec": null,
                 "hex": null,
-                "bin": null
+                "bin": "0"
             },
             "rs": {
                 "enabled": true
@@ -86,189 +56,132 @@
             },
             "funct": {
                 "enabled": true,
-                "value_dec": 36,
-                "value_bin": null
-            }
-        },
-        "ANDI": {
-            "format": "I",
-            "op": {
-                "dec": 12,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true
-            },
-            "rd": {
-                "enabled": false
-            },
-            "shamt": {
-                "enabled": false,
-                "value": null
-            },
-            "funct": {
-                "enabled": false,
-                "value": null
+                "value_dec": null,
+                "value_bin": "100010"
             },
             "imm": {
-                "enabled": true,
-                "value": null
-            }
-        },
-        "BEQ": {
-            "format": "I",
-            "relative_addr": true,
-            "op": {
-                "dec": 4,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true
-            },
-            "rd": {
-                "enabled": false
-            },
-            "shamt": {
                 "enabled": false,
                 "value": null
             },
-            "funct": {
+            "addr": {
                 "enabled": false,
                 "value": null
-            },
-            "imm": {
-                "enabled": true,
-                "value": null
-            }
-        },
-        "LW": {
-            "format": "I",
-            "op": {
-                "dec": 35,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true
-            },
-            "rd": {
-                "enabled": false
-            },
-            "shamt": {
-                "enabled": false,
-                "value": null
-            },
-            "funct": {
-                "enabled": false,
-                "value": null
-            },
-            "imm": {
-                "enabled": true,
-                "value": null
-            }
-        },
-        "NOR": {
-            "format": "R",
-            "op": {
-                "dec": 0,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true
-            },
-            "rd": {
-                "enabled": true
-            },
-            "shamt": {
-                "enabled": true,
-                "value": 0
-            },
-            "funct": {
-                "enabled": true,
-                "value_dec": 39,
-                "value_bin": null
-            }
-        },
-        "OR": {
-            "format": "R",
-            "op": {
-                "dec": 0,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true
-            },
-            "rd": {
-                "enabled": true
-            },
-            "shamt": {
-                "enabled": true,
-                "value": 0
-            },
-            "funct": {
-                "enabled": true,
-                "value_dec": 37,
-                "value_bin": null
-            }
-        },
-        "SLT": {
-            "format": "R",
-            "op": {
-                "dec": 0,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true
-            },
-            "rd": {
-                "enabled": true
-            },
-            "shamt": {
-                "enabled": false,
-                "value": null
-            },
-            "funct": {
-                "enabled": true,
-                "value_dec": 42,
-                "value_bin": null
             }
         },
         "SLL": {
             "format": "R",
             "op": {
-                "dec": 48,
+                "dec": null,
                 "hex": null,
-                "bin": null
+                "bin": "0"
             },
             "rs": {
                 "enabled": true
             },
             "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": true
+            },
+            "shamt": {
                 "enabled": true,
-                "value": 0
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "000000"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "SRL": {
+            "format": "R",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": true
+            },
+            "shamt": {
+                "enabled": true,
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "000010"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "SRA": {
+            "format": "R",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": true
+            },
+            "shamt": {
+                "enabled": true,
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "000011"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "SLLV": {
+            "format": "R",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
             },
             "rd": {
                 "enabled": true
@@ -280,98 +193,23 @@
             "funct": {
                 "enabled": true,
                 "value_dec": 0,
-                "value_bin": null
-            }
-        },
-        "SRL": {
-            "format": "R",
-            "op": {
-                "dec": 48,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true,
-                "value": 0
-            },
-            "rd": {
-                "enabled": true
-            },
-            "shamt": {
-                "enabled": true,
-                "value": null
-            },
-            "funct": {
-                "enabled": true,
-                "value_dec": 2,
-                "value_bin": null
-            }
-        },
-        "SRA": {
-            "format": "R",
-            "op": {
-                "dec": 48,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true,
-                "value": 0
-            },
-            "rd": {
-                "enabled": true
-            },
-            "shamt": {
-                "enabled": true,
-                "value": null
-            },
-            "funct": {
-                "enabled": true,
-                "value_dec": 3,
-                "value_bin": null
-            }
-        },
-        "SW": {
-            "format": "I",
-            "op": {
-                "dec": 43,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true
-            },
-            "rd": {
-                "enabled": false
-            },
-            "shamt": {
-                "enabled": false,
-                "value": null
-            },
-            "funct": {
-                "enabled": false,
-                "value": null
+                "value_bin": "000100"
             },
             "imm": {
-                "enabled": true,
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
                 "value": null
             }
         },
-        "SUB": {
+        "SRLV": {
             "format": "R",
             "op": {
-                "dec": 0,
+                "dec": null,
                 "hex": null,
-                "bin": null
+                "bin": "0"
             },
             "rs": {
                 "enabled": true
@@ -384,20 +222,199 @@
             },
             "shamt": {
                 "enabled": true,
-                "value": 0
+                "value": null
             },
             "funct": {
                 "enabled": true,
-                "value_dec": 34,
-                "value_bin": null
+                "value_dec": null,
+                "value_bin": "000110"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "SRAV": {
+            "format": "R",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": true
+            },
+            "shamt": {
+                "enabled": true,
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "000111"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "ADDU": {
+            "format": "R",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": true
+            },
+            "shamt": {
+                "enabled": true,
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "100001"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+
+        },
+        "SUBU": {
+            "format": "R",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": true
+            },
+            "shamt": {
+                "enabled": true,
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "100011"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "AND": {
+            "format": "R",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": true
+            },
+            "shamt": {
+                "enabled": true,
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "100100"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "OR": {
+            "format": "R",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": true
+            },
+            "shamt": {
+                "enabled": true,
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "100101"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
             }
         },
         "XOR": {
             "format": "R",
             "op": {
-                "dec": 0,
+                "dec": null,
                 "hex": null,
-                "bin": null
+                "bin": "0"
             },
             "rs": {
                 "enabled": true
@@ -410,101 +427,678 @@
             },
             "shamt": {
                 "enabled": true,
-                "value": 0
-            },
-            "funct": {
-                "enabled": true,
-                "value_dec": 38,
-                "value_bin": null
-            }
-        },
-        "MULT": {
-            "format": "R",
-            "op": {
-                "dec": 0,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true
-            },
-            "rd": {
-                "enabled": true
-            },
-            "shamt": {
-                "enabled": true,
-                "value": 0
-            },
-            "funct": {
-                "enabled": true,
-                "value_dec": 24,
-                "value_bin": null
-            }
-        },
-        "DIV": {
-            "format": "R",
-            "op": {
-                "dec": 0,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": true
-            },
-            "rt": {
-                "enabled": true
-            },
-            "rd": {
-                "enabled": true
-            },
-            "shamt": {
-                "enabled": true,
-                "value": 0
-            },
-            "funct": {
-                "enabled": true,
-                "value_dec": 26,
-                "value_bin": null
-            }
-        },
-        "JUMP": {
-            "format": "J",
-            "op": {
-                "dec": 2,
-                "hex": null,
-                "bin": null
-            },
-            "rs": {
-                "enabled": false
-            },
-            "rt": {
-                "enabled": false
-            },
-            "rd": {
-                "enabled": false
-            },
-            "shamt": {
-                "enabled": false,
                 "value": null
             },
             "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "100110"
+            },
+            "imm": {
                 "enabled": false,
                 "value": null
             },
             "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "NOR": {
+            "format": "R",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": true
+            },
+            "shamt": {
                 "enabled": true,
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "100111"
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": true,
+                "value": null
+            }
+        },
+        "SLT": {
+            "format": "R",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": true
+            },
+            "shamt": {
+                "enabled": true,
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "100111"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "LB": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "100000"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "LH": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "100001"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "LW": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "100011"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "LWU": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "100111"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "LBU": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "100100"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }            
+
+        },
+        "LHU": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "100101"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "SB": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "101000"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+
+        },
+        "SH": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "101001"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "SW": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "101011"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "ADDI": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "001000"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "ANDI": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "001100"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "ORI": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "001101"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "XORI": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "001110"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "LUI": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "001111"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "SLTI": {
+            "format": "I",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "001010"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "BEQ": {
+            "format": "I",
+            "relative_addr": true,
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "000100"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "BNE": {
+            "format": "I",
+            "relative_addr": true,
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "000101"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": true
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": true,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
                 "value": null
             }
         },
         "J": {
             "format": "J",
             "op": {
-                "dec": 2,
+                "dec": null,
                 "hex": null,
-                "bin": null
+                "bin": "000010"
             },
             "rs": {
                 "enabled": false
@@ -520,6 +1114,11 @@
                 "value": null
             },
             "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
                 "enabled": false,
                 "value": null
             },
@@ -528,12 +1127,12 @@
                 "value": null
             }
         },
-        "HALT": {
-            "format": "HALT",
+        "JAL": {
+            "format": "J",
             "op": {
-                "dec": null,      
-                "hex": "0x3f",
-                "bin": null
+                "dec": null,
+                "hex": null,
+                "bin": "000011"
             },
             "rs": {
                 "enabled": false
@@ -549,6 +1148,113 @@
                 "value": null
             },
             "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": true,
+                "value": null
+            }
+        },
+        "JR": {
+            "format": "J",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": false
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "001000"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "JALR": {
+            "format": "J",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "0"
+            },
+            "rs": {
+                "enabled": true
+            },
+            "rt": {
+                "enabled": false
+            },
+            "rd": {
+                "enabled": true
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": true,
+                "value_dec": null,
+                "value_bin": "001001"
+            },
+            "imm": {
+                "enabled": false,
+                "value": null
+            },
+            "addr": {
+                "enabled": false,
+                "value": null
+            }
+        },
+        "HALT": {
+            "format": "HALT",
+            "op": {
+                "dec": null,
+                "hex": null,
+                "bin": "111111"
+            },
+            "rs": {
+                "enabled": false
+            },
+            "rt": {
+                "enabled": false
+            },
+            "rd": {
+                "enabled": false
+            },
+            "shamt": {
+                "enabled": false,
+                "value": null
+            },
+            "funct": {
+                "enabled": false,
+                "value_dec": null,
+                "value_bin": null
+            },
+            "imm": {
                 "enabled": false,
                 "value": null
             },

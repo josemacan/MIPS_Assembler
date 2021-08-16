@@ -6,8 +6,7 @@ class mips:
     addr_offset = 1
     label_addr = {}
 
-    #def __init__(self, base_address=0, reg_json="./_db/registers.json", format_json="./_db/inst_format.json", inst_json="./_db/inst.json"):
-    def __init__(self, base_address=0, reg_json="./_db/registers.json", format_json="./_db/inst_format.json", inst_json="./_db/instructions.json"):
+    def __init__(self, base_address=0, reg_json="./_db/registers.json", format_json="./_db/inst_format.json", inst_json="./_db/inst.json"):
         with open(reg_json)as fp:
             self.reg = json.load(fp)
         with open(format_json)as fp:

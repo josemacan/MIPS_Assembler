@@ -1,15 +1,15 @@
 ADDI $0, $17,  4
-ADDI $zero, $s1,  4
-ADDI $zero, $s2, 3
-ADDI $zero, $s3, 1
-ADDI $zero, $s4, 2
+ADDI $0, $17,  4
+ADDI $0, $18, 3
+ADDI $0, $19, 1
+ADDI $0, $20, 2
 
-BEQ $s3, $s4, else
-ADD $s1, $s2, $s0
-jump end
+BEQ $19, $20, else
+ADD $17, $18, $16
+J end
 else:
-SUB $s1, $s2, $s0
+SUB $17, $18, $16
 end:
 
-ADD $zero, $zero, $zero// not necessary
+ADD $0, $0, $0// not necessary
 HALT
