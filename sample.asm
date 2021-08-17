@@ -1,15 +1,37 @@
-ADDI $0, $17,  4
-ADDI $0, $17,  4
-ADDI $0, $18, 3
-ADDI $0, $19, 1
-ADDI $0, $20, 2
-
-BEQ $19, $20, else
-ADD $17, $18, $16
-J end
-else:
-SUB $17, $18, $16
-end:
-
-ADD $0, $0, $0// not necessary
+ADD $5, $6, $4  // reg(4) = reg(5) + reg(6)
+SUB
+SLL
+SRL
+SRA
+SLLV
+SRLV
+SRAV
+ADDU
+SUBU
+AND
+OR
+XOR
+NOR
+SLT
+LB
+LH
+LW
+LWU
+LBU
+LHU
+SB
+SH
+SW 
+ADDI
+ANDI
+ORI
+XORI
+LUI
+SLTI
+BEQ
+BNE
+J
+JAL
+JR
+JALR
 HALT
