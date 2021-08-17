@@ -145,6 +145,7 @@ class mips:
         l = self._special_inst_handeler(l)
         binary = []
         inst_format = self.format.get('types', {}).get(inst_dict.get('format'))
+        #print("Inst_format len: ", len(inst_format))
         if inst_format == None:
             logging.error("Unknown instruction type {}".format(
                 inst_dict.get('format')))
@@ -178,18 +179,38 @@ class mips:
                         continue
             else:
                 if inst_dict.get(placeholder, {}).get('enabled', False):
-                    if index < len(l):
-                        l[index] = self._replace_slot(
-                            l[index], addr, inst_dict.get("relative_addr", False))
+                    ###
+                    print("l = ", l, "\n len(l) = ", len(l))
+                    ###
+                    #if index < len(l):
+                    #    l[index] = self._replace_slot(
+                    #        l[index], addr, inst_dict.get("relative_addr", False))
                     value = inst_dict.get(placeholder, {}).get('value', '-1')
+                    print("placeholder: ", placeholder, " value = ", value)
+                    pos_in_instr= inst_dict.get(placeholder, {}).get('pos_intrs', '-1')
+                    pos_in_instr = int(pos_in_instr)
+                    print("pos_in: ", pos_in_instr)
+                    if pos_in_instr != -1:
+                        l[pos_in_instr] = self._replace_slot(l[pos_in_instr], addr, inst_dict.get("relative_addr", False))
+                    print("l pos_in: ", l[pos_in_instr])
                     if value == None:  # value from l
-                        ph = self._convert_to_bin(l[index], bit)
+                        ###
+                        print(l[index])
+                        ###
+                        #ph = self._convert_to_bin(l[index], bit)
+                        ph = self._convert_to_bin(l[pos_in_instr], bit)
                         index = index + 1
                     elif value == '-1' or value == -1:  # no value. say a reg
-                        ph = self._convert_to_bin(l[index], bit)
+                        #ph = self._convert_to_bin(l[index], bit)
+                        ph = self._convert_to_bin(l[pos_in_instr], bit)
                         index = index + 1
+                    elif value == 0:    # fill with 0
+                        ph = self._convert_to_bin(0, bit)
                     else:  # result should be value
                         ph = self._convert_to_bin(value, bit)
+                    ###
+                    print(placeholder, value, ph)
+                    ###
                     binary.append(ph)
         print("Binary: ", binary)
         return sep.join(binary) + end

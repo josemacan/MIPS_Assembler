@@ -3,18 +3,22 @@
         "ADD": {
             "format": "R",
             "op": {
+                "pos_intrs": 0,
                 "dec": null,
                 "hex": null,
                 "bin": "0"
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
@@ -37,18 +41,22 @@
         "SUB": {
             "format": "R",
             "op": {
+                "pos_intrs": 0,
                 "dec": null,
                 "hex": null,
                 "bin": "0"
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
@@ -71,22 +79,26 @@
         "SLL": {
             "format": "R",
             "op": {
+                "pos_intrs": 0,
                 "dec": null,
                 "hex": null,
                 "bin": "0"
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "value": 0
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "pos_intrs": 3
             },
             "funct": {
                 "enabled": true,
