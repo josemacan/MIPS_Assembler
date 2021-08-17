@@ -92,14 +92,23 @@ class mips:
         return line.strip()
 
     def _special_inst_handeler(self, l: list) -> list:
-        if l[0].upper() == 'LW' or l[0].upper() == 'SW':
+        load_store_instrs = ['LB', 'LH', 'LW', 'LWU', 'LBU', 'LHU', 'SB', 'SH', 'SW']
+        match = 0
+        for instr in load_store_instrs:
+            if l[0].upper() == instr:
+                match = 1
+                break
+        #if l[0].upper() == 'LW' or l[0].upper() == 'SW':
+        if match == 1:
             base_reg = l[2][l[2].find('(')+1:l[2].find(')')]
             dest_reg = l[1]
             offset = l[2][:l[2].find('(')]
-            return [l[0].upper(), base_reg, dest_reg, offset]
+            #return [l[0].upper(), base_reg, dest_reg, offset]
+            return [l[0].upper(), dest_reg, offset, base_reg]
         return l
 
     def _replace_slot(self, src, addr, relative_addr: bool) -> int:
+        print("Src: ", src)
         ### - src: name of operand ($zero, $s1, 4 (imm), etc)
         ### - addr: number of line (1, 2, 3, ...)
         ### - relative_addr: True (when relative, eg: tag) // False
@@ -132,7 +141,10 @@ class mips:
 
     def _parse(self, line: str, addr: int, sep=' ', end='\n') -> str:
         line = self._decommentize(line)
+        print("Line: ", line)
         l = [i for i in line.replace(',', ' ').split(' ') if i.strip()]
+        print("L: ", l)
+
         if l[0].upper() == "HALT" :
             print("HALT INSTRUCTION")
         if len(l) < 2 & (l[0].upper() != "HALT"):
@@ -143,6 +155,9 @@ class mips:
             logging.error("Unknown instruction {}".format(l[0].upper()))
             return end
         l = self._special_inst_handeler(l)
+        print("L self spec: ", l)
+
+        
         binary = []
         inst_format = self.format.get('types', {}).get(inst_dict.get('format'))
         #print("Inst_format len: ", len(inst_format))

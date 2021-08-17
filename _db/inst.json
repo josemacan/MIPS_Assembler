@@ -117,22 +117,26 @@
         "SRL": {
             "format": "R",
             "op": {
+                "pos_intrs": 0,
                 "dec": null,
                 "hex": null,
                 "bin": "0"
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "value": 0
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "pos_intrs": 3
             },
             "funct": {
                 "enabled": true,
@@ -151,22 +155,27 @@
         "SRA": {
             "format": "R",
             "op": {
+                "pos_intrs": 0,
                 "dec": null,
                 "hex": null,
                 "bin": "0"
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "value": 0
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 3
             },
             "funct": {
                 "enabled": true,
@@ -185,26 +194,30 @@
         "SLLV": {
             "format": "R",
             "op": {
+                "pos_intrs": 0,
                 "dec": null,
                 "hex": null,
                 "bin": "0"
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "value": 0
             },
             "funct": {
                 "enabled": true,
-                "value_dec": 0,
+                "value_dec": null,
                 "value_bin": "000100"
             },
             "imm": {
@@ -221,20 +234,24 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "0"
+                "bin": "0",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "value": 0
             },
             "funct": {
                 "enabled": true,
@@ -255,20 +272,24 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "0"
+                "bin": "0",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "value": 0
             },
             "funct": {
                 "enabled": true,
@@ -289,20 +310,24 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "0"
+                "bin": "0",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "value": 0
             },
             "funct": {
                 "enabled": true,
@@ -324,20 +349,24 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "0"
+                "bin": "0",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "value": 0
             },
             "funct": {
                 "enabled": true,
@@ -358,20 +387,24 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "0"
+                "bin": "0",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "value": 0
             },
             "funct": {
                 "enabled": true,
@@ -392,20 +425,24 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "0"
+                "bin": "0",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "value": 0
             },
             "funct": {
                 "enabled": true,
@@ -426,20 +463,24 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "0"
+                "bin": "0",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "value": 0
             },
             "funct": {
                 "enabled": true,
@@ -460,20 +501,24 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "0"
+                "bin": "0",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "value": 0
             },
             "funct": {
                 "enabled": true,
@@ -494,25 +539,29 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "0"
+                "bin": "0",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "shamt": {
                 "enabled": true,
-                "value": null
+                "value": 0
             },
             "funct": {
                 "enabled": true,
                 "value_dec": null,
-                "value_bin": "100111"
+                "value_bin": "101010"
             },
             "imm": {
                 "enabled": false,
@@ -528,13 +577,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "100000"
+                "bin": "100000",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -550,7 +602,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 2
             },
             "addr": {
                 "enabled": false,
@@ -562,13 +615,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "100001"
+                "bin": "100001",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -584,7 +640,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 2
             },
             "addr": {
                 "enabled": false,
@@ -596,13 +653,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "100011"
+                "bin": "100011",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -618,7 +678,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 2
             },
             "addr": {
                 "enabled": false,
@@ -630,13 +691,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "100111"
+                "bin": "100111",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -652,7 +716,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 2
             },
             "addr": {
                 "enabled": false,
@@ -664,13 +729,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "100100"
+                "bin": "100100",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -686,7 +754,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 2
             },
             "addr": {
                 "enabled": false,
@@ -699,13 +768,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "100101"
+                "bin": "100101",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -721,7 +793,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 2
             },
             "addr": {
                 "enabled": false,
@@ -733,13 +806,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "101000"
+                "bin": "101000",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -755,7 +831,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 2
             },
             "addr": {
                 "enabled": false,
@@ -768,13 +845,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "101001"
+                "bin": "101001",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -790,7 +870,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 2
             },
             "addr": {
                 "enabled": false,
@@ -802,13 +883,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "101011"
+                "bin": "101011",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 3
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -824,7 +908,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 2
             },
             "addr": {
                 "enabled": false,
@@ -836,13 +921,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "001000"
+                "bin": "001000",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -858,7 +946,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 3
             },
             "addr": {
                 "enabled": false,
@@ -870,13 +959,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "001100"
+                "bin": "001100",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -892,7 +984,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 3
             },
             "addr": {
                 "enabled": false,
@@ -904,13 +997,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "001101"
+                "bin": "001101",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -926,7 +1022,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 3
             },
             "addr": {
                 "enabled": false,
@@ -938,13 +1035,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "001110"
+                "bin": "001110",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -960,7 +1060,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 3
             },
             "addr": {
                 "enabled": false,
@@ -972,13 +1073,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "001111"
+                "bin": "001111",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "value": 0
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -994,7 +1098,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 2
             },
             "addr": {
                 "enabled": false,
@@ -1006,13 +1111,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "001010"
+                "bin": "001010",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rd": {
                 "enabled": false
@@ -1028,7 +1136,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 3
             },
             "addr": {
                 "enabled": false,
@@ -1041,13 +1150,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "000100"
+                "bin": "000100",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rd": {
                 "enabled": false
@@ -1063,7 +1175,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 3
             },
             "addr": {
                 "enabled": false,
@@ -1076,13 +1189,16 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "000101"
+                "bin": "000101",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rt": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 2
             },
             "rd": {
                 "enabled": false
@@ -1098,7 +1214,8 @@
             },
             "imm": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 3
             },
             "addr": {
                 "enabled": false,
@@ -1110,7 +1227,8 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "000010"
+                "bin": "000010",
+                "pos_intrs": 0
             },
             "rs": {
                 "enabled": false
@@ -1136,7 +1254,8 @@
             },
             "addr": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 1
             }
         },
         "JAL": {
@@ -1144,7 +1263,8 @@
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "000011"
+                "bin": "000011",
+                "pos_intrs": 0
             },
             "rs": {
                 "enabled": false
@@ -1170,28 +1290,33 @@
             },
             "addr": {
                 "enabled": true,
-                "value": null
+                "value": null,
+                "pos_intrs": 1
             }
         },
         "JR": {
-            "format": "J",
+            "format": "R",
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "0"
+                "bin": "0",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rt": {
-                "enabled": false
+                "enabled": true,
+                "value": 0
             },
             "rd": {
-                "enabled": false
+                "enabled": true,
+                "value": 0
             },
             "shamt": {
-                "enabled": false,
-                "value": null
+                "enabled": true,
+                "value": 0
             },
             "funct": {
                 "enabled": true,
@@ -1208,24 +1333,28 @@
             }
         },
         "JALR": {
-            "format": "J",
+            "format": "R",
             "op": {
                 "dec": null,
                 "hex": null,
-                "bin": "0"
+                "bin": "0",
+                "pos_intrs": 0
             },
             "rs": {
-                "enabled": true
+                "enabled": true,
+                "pos_intrs": 1
             },
             "rt": {
-                "enabled": false
+                "enabled": true,
+                "value": 0
             },
             "rd": {
-                "enabled": true
+                "enabled": true,
+                "value": 31
             },
             "shamt": {
-                "enabled": false,
-                "value": null
+                "enabled": true,
+                "value": 0
             },
             "funct": {
                 "enabled": true,
