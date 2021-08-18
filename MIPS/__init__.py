@@ -108,7 +108,6 @@ class mips:
         return l
 
     def _replace_slot(self, src, addr, relative_addr: bool) -> int:
-        print("Src: ", src)
         ### - src: name of operand ($zero, $s1, 4 (imm), etc)
         ### - addr: number of line (1, 2, 3, ...)
         ### - relative_addr: True (when relative, eg: tag) // False
@@ -141,12 +140,9 @@ class mips:
 
     def _parse(self, line: str, addr: int, sep=' ', end='\n') -> str:
         line = self._decommentize(line)
-        print("Line: ", line)
         l = [i for i in line.replace(',', ' ').split(' ') if i.strip()]
-        print("L: ", l)
-
-        if l[0].upper() == "HALT" :
-            print("HALT INSTRUCTION")
+        #if l[0].upper() == "HALT" :
+        #    print("HALT INSTRUCTION")
         if len(l) < 2 & (l[0].upper() != "HALT"):
             logging.error("Invalid Instruction {}".format(line))
             return ''
@@ -154,13 +150,9 @@ class mips:
         if inst_dict == None:
             logging.error("Unknown instruction {}".format(l[0].upper()))
             return end
-        l = self._special_inst_handeler(l)
-        print("L self spec: ", l)
-
-        
+        l = self._special_inst_handeler(l)   
         binary = []
         inst_format = self.format.get('types', {}).get(inst_dict.get('format'))
-        #print("Inst_format len: ", len(inst_format))
         if inst_format == None:
             logging.error("Unknown instruction type {}".format(
                 inst_dict.get('format')))
@@ -194,40 +186,22 @@ class mips:
                         continue
             else:
                 if inst_dict.get(placeholder, {}).get('enabled', False):
-                    ###
-                    print("l = ", l, "\n len(l) = ", len(l))
-                    ###
-                    #if index < len(l):
-                    #    l[index] = self._replace_slot(
-                    #        l[index], addr, inst_dict.get("relative_addr", False))
                     value = inst_dict.get(placeholder, {}).get('value', '-1')
-                    print("placeholder: ", placeholder, " value = ", value)
                     pos_in_instr= inst_dict.get(placeholder, {}).get('pos_intrs', '-1')
                     pos_in_instr = int(pos_in_instr)
-                    print("pos_in: ", pos_in_instr)
                     if pos_in_instr != -1:
                         l[pos_in_instr] = self._replace_slot(l[pos_in_instr], addr, inst_dict.get("relative_addr", False))
-                    print("l pos_in: ", l[pos_in_instr])
                     if value == None:  # value from l
-                        ###
-                        print(l[index])
-                        ###
-                        #ph = self._convert_to_bin(l[index], bit)
                         ph = self._convert_to_bin(l[pos_in_instr], bit)
                         index = index + 1
                     elif value == '-1' or value == -1:  # no value. say a reg
-                        #ph = self._convert_to_bin(l[index], bit)
                         ph = self._convert_to_bin(l[pos_in_instr], bit)
                         index = index + 1
                     elif value == 0:    # fill with 0
                         ph = self._convert_to_bin(0, bit)
                     else:  # result should be value
                         ph = self._convert_to_bin(value, bit)
-                    ###
-                    print(placeholder, value, ph)
-                    ###
                     binary.append(ph)
-        print("Binary: ", binary)
         return sep.join(binary) + end
 
     def translate_line(self, assembly_code: str, human_readable=False) -> str:
@@ -257,9 +231,6 @@ class mips:
         lines = self._preprocess(text)
         addr = self.base_address
         for i in lines:
-            ###
-            print("---- Line: ", i)
-            ###
             src = '    |    ' + i.strip() if with_src else ''
             bin_code.append(self._parse(i, addr=addr, end='',
                                         sep=' ' if human_readable else '') + src)

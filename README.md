@@ -1,31 +1,22 @@
 # MIPS Assembler
 
-## Get Started
+## Original project
 
-![Screen Shot](https://github.com/maao666/MIPS_Assembler/raw/master/Screen%20Shot.png)
+This repository is an complement to [maao666's MIPS_Assembler](https://github.com/maao666/MIPS_Assembler) project.
+
+### Changelog
+
+* Total of 37 MIPS instructions based on Charles Price's "[MIPS IV Instruction Set](https://www.cs.cmu.edu/afs/cs/academic/class/15740-f97/public/doc/mips-isa.pdf)" (1995).
+* HALT instruction has been added
+* Opcode number can be added as a decimal, hexadecimal or binary number.
+* Function number can be added as decimal or binary number.
+* Registers are both refered by their conventional names (e.g: $zero) or by their numbers (e.g: $0)
+
+## Get Started
 
 To turn `.asm` file into machine code, simply do:
 
 `python3 main.py ./sample.asm`
-
-Of course parsing a single line is also supported.
-
-## APIs
-
-- `translate_line`:
-        Translate a single line of assembly code to binary
-
-        Usage: `translate_line('BEQ $s3 $s1 #2')`
-    
-        `human_readable`: set True to add a space between slots to make it more readable
-
-- `assemble`:
-        Assemble a assembly file to binary
-
-        Usage: `assemble('./sample.asm')`
-    
-        `human_readable`: set True to add a space between slots to make it more readable
-        `with_src`: set False to generate pure machine code
 
 ## Customization
 
@@ -33,4 +24,3 @@ The JSON format database makes it easy to create your own instruction sets.
 
 To add your own instruction, edit `_db/inst.json` following the format of other instructions.
 
-**Your star is always appreciated!**
