@@ -215,7 +215,7 @@ class mips:
         '''
         return self._parse(assembly_code, addr=-1, sep=' ' if human_readable else '', end='')
 
-    def assemble(self, filename: str, human_readable=False, with_src=True) -> str:
+    def assemble(self, filename: str, human_readable=False, with_src=False) -> str:
         '''
         Assemble a assembly file to binary
         --------------------------------------------------

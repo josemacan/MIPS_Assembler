@@ -11,6 +11,7 @@ This repository is an complement to [maao666's MIPS_Assembler](https://github.co
 * Opcode number can be added as a decimal, hexadecimal or binary number.
 * Function number can be added as decimal or binary number.
 * Registers are both refered by their conventional names (e.g: $zero) or by their numbers (e.g: $0)
+* Binary source code is generated into a .mem program
 
 ## Get Started
 
