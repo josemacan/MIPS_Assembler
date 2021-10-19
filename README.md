@@ -24,4 +24,3 @@ To turn `.asm` file into machine code, simply do:
 The JSON format database makes it easy to create your own instruction sets.
 
 To add your own instruction, edit `_db/inst.json` following the format of other instructions.
-
